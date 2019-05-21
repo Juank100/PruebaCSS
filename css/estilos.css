@@ -1,5 +1,8 @@
 body {
 	margin: 15px;
+	font-family: 'Dancing Script OT', arial;
+	text-shadow: 4px 4px 4px #aaa;
+	background:  #02010a
 }
 header{
   background: #5b7989;
@@ -9,7 +12,9 @@ footer{
   background: #C6d5c5;
   border-radius: 0px 0px 10px 10px;
 }
-
+img{
+	box-shadow: 2px 2px 2px #02010a;
+}
 #titulo{
   color: white;
   text-shadow: 2px 2px #02010a;
@@ -18,6 +23,11 @@ footer{
   display: flex;
   flex-direction: column;
 }
+.contenedorpie {
+  display: flex;
+  flex-direction: column;
+}
+
 #imagenprincipal{
   background: #82c3a6;
   text-align: center;
@@ -26,7 +36,10 @@ footer{
 	display: flex;
 	flex-direction: row;
 }
-
+.seccionpie{
+	display: flex;
+	flex-direction: row;
+}
 #imagensecundario .imagensegundo > div {
   text-align: center;
 	padding: 10px;
@@ -57,6 +70,13 @@ footer{
 		margin-left: auto;
 		margin-right: auto;
 	}
+	.seccionpie {
+    display: flex;
+  	flex-direction: column;
+		width: 480px;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
 #imagendos:hover {
@@ -71,6 +91,37 @@ footer{
 	border: 2px solid;
 }
 
-footer  {
-border: 2px solid
-        }
+article
+	{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float:left;
+    height: 100%;
+    padding: 2%;
+    text-align: center;
+    background: #C6d5c5;
+	}
+
+#column1
+    {
+    width: 25%;
+    }
+#column2
+    {
+  	width: 25%;
+		text-align: justify;
+		margin-right: 30px
+    }
+#column3
+    {
+    width: 25%;
+    }
+#column4
+    {
+    width: 25%;
+    }
+@font-face {
+    font-family: 'Dancing Script OT';
+    src: url("fonts/DancingScript-Regular.otf") format("opentype");
+}
