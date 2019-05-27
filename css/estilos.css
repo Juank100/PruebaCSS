@@ -1,16 +1,35 @@
 body {
 	margin: 15px;
-	font-family: 'Dancing Script OT', arial;
+	font-family: 'Dancing Script';
 	text-shadow: 4px 4px 4px #aaa;
-	background:  #02010a
+	background:  #02010a;
 }
 header{
   background: #5b7989;
   border-radius: 10px 10px 0px 0px;
+	height:50px;
+}
+nav{
+	float: right;
+	color: #02010a;
+	font-size: 24px;
+}
+a{
+	color: white;
 }
 footer{
   background: #C6d5c5;
   border-radius: 0px 0px 10px 10px;
+}
+.contenido
+{
+	position: absolute;
+	width: 900px;
+	padding:5px;
+	margin-left:auto;
+	margin-right:auto;
+	left:0;
+	right:0;
 }
 img{
 	box-shadow: 2px 2px 2px #02010a;
@@ -31,6 +50,7 @@ img{
 #imagenprincipal{
   background: #82c3a6;
   text-align: center;
+  flex-direction: column;
 }
 .imagensegundo{
 	display: flex;
@@ -42,11 +62,10 @@ img{
 }
 #imagensecundario .imagensegundo > div {
   text-align: center;
+	display: flex;
 	padding: 10px;
-	margin: 10px;
 	background-color: #d5c75f;
 	width: 50%;
-  height: 50%;
   border-style: solid;
   border-width: 10px, 10px, 10px, 10px;
   }
@@ -58,11 +77,29 @@ img{
   object-fit: cover;
   }
 
-#imagentres {
-    width: 22%;
-}
-
 @media (max-width: 480px) {
+	.contenido {
+    display: flex;
+  	flex-direction: column;
+		width: 480px;
+		height: auto;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	header {
+    display: flex;
+  	flex-direction: column;
+		width: 480px;
+		height: auto;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	nav {
+		float:none;
+		text-align: center;
+	}
 	.imagensegundo {
     display: flex;
   	flex-direction: column;
@@ -77,10 +114,28 @@ img{
 		margin-left: auto;
 		margin-right: auto;
 	}
+	#column1
+	    {
+	    width: 100%;
+	    }
+	#column2
+	    {
+			width: 100%;
+			text-align: justify;
+			margin-right: 30px;
+	    }
+	#column3
+	    {
+	    width: 100%;
+	    }
+	#column4
+	    {
+	    width: 100%;
+	    }
 }
 
 #imagendos:hover {
-	transform: rotate(-10deg);
+	transform: rotate(10deg);
 	box-shadow: 2px 2px 5px #82c3a6;
 	border: 2px solid;
 }
@@ -94,7 +149,7 @@ img{
 article
 	{
     -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
+    -mo-z-box-sizing: border-box;
     box-sizing: border-box;
     float:left;
     height: 100%;
@@ -102,26 +157,39 @@ article
     text-align: center;
     background: #C6d5c5;
 	}
+.seccionpie{
+	position: absolute;
+	background: #C6d5c5;
 
-#column1
-    {
-    width: 25%;
-    }
-#column2
-    {
-  	width: 25%;
-		text-align: justify;
-		margin-right: 30px
-    }
-#column3
-    {
-    width: 25%;
-    }
-#column4
-    {
-    width: 25%;
-    }
-@font-face {
-    font-family: 'Dancing Script OT';
-    src: url("fonts/DancingScript-Regular.otf") format("opentype");
 }
+@media (min-width: 480px) {
+	#column1
+	    {
+	    width: 25%;
+	    }
+	#column2
+	    {
+			width: 25%;
+			text-align: justify;
+			margin-right: 30px;
+	    }
+	#column3
+	    {
+	    width: 25%;
+	    }
+	#column4
+	    {
+	    width: 25%;
+	    }
+}
+@font-face {
+	  font-family: 'Dancing Script';
+	  font-style: normal;
+	  src: url('../fonts/dancing-script-v10-latin-regular.eot'); /* IE9 Compat Modes */
+	  src: local('Dancing Script Regular'), local('DancingScript-Regular'),
+	       url('../fonts/dancing-script-v10-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	       url('../fonts/dancing-script-v10-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+	       url('../fonts/dancing-script-v10-latin-regular.woff') format('woff'), /* Modern Browsers */
+	       url('../fonts/dancing-script-v10-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+	       url('../fonts/dancing-script-v10-latin-regular.svg#DancingScript') format('svg'); /* Legacy iOS */
+	}
