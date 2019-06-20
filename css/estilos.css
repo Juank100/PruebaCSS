@@ -16,6 +16,7 @@ nav{
 }
 a{
 	color: white;
+	link();
 }
 footer{
   background: #C6d5c5;
@@ -25,7 +26,7 @@ footer{
 .contenido
 {
 	position: absolute;
-	width: 900px;
+	width: 100%;
 	padding:5px;
 	margin-left:auto;
 	margin-right:auto;
@@ -56,6 +57,7 @@ img{
 .imagensegundo{
 	display: flex;
 	flex-direction: row;
+	background:  #d5c75f;
 }
 .seccionpie{
 	display: flex;
@@ -63,59 +65,64 @@ img{
 }
 #imagensecundario .imagensegundo > div {
   text-align: center;
-	display: flex;
+	display: center;
 	padding: 10px;
 	width: 50%;
   border-style: solid;
   border-width: 10px, 10px, 10px, 10px;
   }
 .imagensegundo img {
+	text-align: center;
   object-position: center;
   width: 50%;
-  height: 100%;
+  height: 90%;
   object-fit: cover;
   }
 
 @media (max-width: 480px) {
-	.contenido {
+body {
+	display: flex;
+}
+.imagensegundo{
+	display: block;
+}
+#imagenprincipal {
+	display:flex;
+	
+}
+#imagensecundario .imagensegundo > div {
+  text-align: center;
+	display: center;
+	padding: 10px;
+	width: 100%;
+  border-style: solid;
+  border-width: 10px, 10px, 10px, 10px;
+  }
+
+header {
+		width: 100%;
+		text-align: center;
     display: flex;
   	flex-direction: column;
-		width: 480px;
 		height: auto;
 		margin-left: auto;
 		margin-right: auto;
 	}
-
-	header {
-    display: flex;
-  	flex-direction: column;
-		width: 480px;
-		height: auto;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
 	nav {
 		float:none;
 		text-align: center;
 	}
-	.imagensegundo {
+.seccionpie {
     display: flex;
   	flex-direction: column;
-		width: 480px;
-		margin-left: auto;
-		margin-right: auto;
-	}
-	.seccionpie {
-    display: flex;
-  	flex-direction: column;
-		width: 480px;
+		width: 100%;
 		margin-left: auto;
 		margin-right: auto;
 	}
 	#column1
 	    {
 	    width: 100%;
+			text-align: left;
 	    }
 	#column2
 	    {
@@ -126,10 +133,12 @@ img{
 	#column3
 	    {
 	    width: 100%;
+			text-align: left;
 	    }
 	#column4
 	    {
 	    width: 100%;
+			text-align: left;
 	    }
 }
 
